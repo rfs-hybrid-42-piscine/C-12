@@ -24,8 +24,8 @@ Every single exercise in this module relies on the custom `t_list` structure def
 ```c
 typedef struct s_list
 {
-    void            *data;
     struct s_list   *next;
+    void            *data;
 }                   t_list;
 ```
 
