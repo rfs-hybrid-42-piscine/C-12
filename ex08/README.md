@@ -15,7 +15,7 @@ This requires highly precise pointer gymnastics to invert the chain in-place.
    *Check out the source file here:* **[`ft_list_reverse.c`](ft_list_reverse.c)**
 
 2. **Testing:**
-   > **⚠️ Note for ex08:** The subject explicitly forbids turning in `ft_list.h` for this directory. Therefore, to compile the test from this folder, we must temporarily point the compiler to the header file residing in `ex00`.
+   > **⚠️ Note for ex08:** The subject explicitly forbids turning in **[`ft_list.h`](../ex00/ft_list.h)** for this directory. Therefore, to compile the test from this folder, we must temporarily point the compiler to the header file residing in `ex00`.
    
    Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX08` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
