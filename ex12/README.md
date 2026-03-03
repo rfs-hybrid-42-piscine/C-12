@@ -15,7 +15,7 @@ This is arguably the most dangerous memory manipulation exercise in the Piscine.
    *Check out the source file here:* **[`ft_list_remove_if.c`](ft_list_remove_if.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX11` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX12` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -I . -D EX12 ../tester.c ft_list_remove_if.c -o test_ex12
    ./test_ex12
