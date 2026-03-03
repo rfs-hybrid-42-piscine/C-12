@@ -15,7 +15,7 @@ This exercise introduces pointer rerouting to insert data at the head of a chain
    *Check out the source file here:* **[`ft_list_push_front.c`](ft_list_push_front.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX01` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside `ft_create_elem.c`!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX01` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside **[`ft_create_elem.c`](../ex00/ft_create_elem.c)**!
    ```bash
    cc -Wall -Wextra -Werror -I . -D EX01 ../tester.c ft_list_push_front.c ../ex00/ft_create_elem.c -o test_ex01
    ./test_ex01
