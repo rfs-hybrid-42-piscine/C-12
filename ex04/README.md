@@ -15,7 +15,7 @@ This combines node creation with tail-finding logic.
    *Check out the source file here:* **[`ft_list_push_back.c`](ft_list_push_back.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX04` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside `ft_create_elem.c`!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX04` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside **[`ft_create_elem.c`](../ex00/ft_create_elem.c)**!
    ```bash
    cc -Wall -Wextra -Werror -I . -D EX04 ../tester.c ft_list_push_back.c ../ex00/ft_create_elem.c -o test_ex04
    ./test_ex04
