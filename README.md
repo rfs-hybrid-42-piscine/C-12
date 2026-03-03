@@ -72,7 +72,9 @@ typedef struct s_list
 ### 🧪 Compilation & Testing (The Master Test)
 Unlike standard types, testing linked lists requires you to manually build chains of memory in a testing file.
 
-To make testing incredibly easy while avoiding "undefined reference" linker errors, the **[`tester.c`](tester.c)** file in the root directory uses **C Preprocessor Macros** (`#ifdef`). This allows you to selectively compile and test only the exercises you want.
+To make testing incredibly easy while avoiding "undefined reference" linker errors, the **[`tester.c`](tester.c)** file in the root directory uses **C Preprocessor Macros** (`#ifdef`). This allows you to selectively compile and test only the exercises you want. 
+
+> **Important Setup Note:** Because `ft_list.h` is intentionally not placed in the root directory (to avoid Norminette repository structure errors), you must use the `-I ex00` flag when compiling from the root so the compiler knows where to find the header file!
 
 1. **Clone the repository:**
    You can clone this module directly, or pull the entire 42 Piscine parent repository which includes this module as a submodule.
@@ -94,22 +96,22 @@ To make testing incredibly easy while avoiding "undefined reference" linker erro
    Pass the corresponding `-D EX**` flag to activate that specific test block inside **[`tester.c`](tester.c)**. Note that testing higher-level functions often requires compiling the lower-level creation functions alongside them!
    ```bash
    # Example for ex01 (requires ex00 to create the elements first):
-   cc -Wall -Wextra -Werror -D EX01 tester.c ex00/ft_create_elem.c ex01/ft_list_push_front.c -o test_ex01
+   cc -Wall -Wextra -Werror -I ex00 -D EX01 tester.c ex00/ft_create_elem.c ex01/ft_list_push_front.c -o test_ex01
    ./test_ex01
    ```
 
 3. **Test Multiple Exercises Together:**
    You can chain multiple `-D` flags to test several functions at once, provided you include all their `.c` files in the command.
    ```bash
-   # Example for ex02 and ex04:
-   cc -Wall -Wextra -Werror -D EX02 -D EX04 tester.c ex02/ft_list_size.c ex04/ft_list_push_back.c -o test_multiple
+   # Example for ex02 and ex04 (ex04 requires ft_create_elem):
+   cc -Wall -Wextra -Werror -I ex00 -D EX02 -D EX04 tester.c ex00/ft_create_elem.c ex02/ft_list_size.c ex04/ft_list_push_back.c -o test_multiple
    ./test_multiple
    ```
 
-5. **Test ALL Exercises at Once:**
+4. **Test ALL Exercises at Once:**
    By passing the `-D TEST_ALL` master flag, you can activate the entire testing suite in one go!
    ```bash
-   cc -Wall -Wextra -Werror -D TEST_ALL tester.c ex00/*.c ex01/*.c ex02/*.c ... -o test_all
+   cc -Wall -Wextra -Werror -I ex00 -D TEST_ALL tester.c ex00/*.c ex01/*.c ex02/*.c ... -o test_all
    ./test_all
    ```
 
@@ -129,7 +131,7 @@ Before writing any code, every file must start with the standard 42 header. `nor
 /*   By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 04:11:30 by maaugust          #+#    #+#             */
-/*   Updated: 2026/03/02 04:11:31 by maaugust         ###   ########.fr       */
+/*   Updated: 2026/03/03 00:52:24 by maaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 ```
