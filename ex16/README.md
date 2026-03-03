@@ -15,7 +15,7 @@ This requires dynamically evaluating sequence direction and injecting a node int
    *Check out the source file here:* **[`ft_sorted_list_insert.c`](ft_sorted_list_insert.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX16` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside `ft_create_elem.c`!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-12` directory. You must pass the `-D EX16` flag to the compiler to selectively activate the test for this specific exercise! Because this function requires node creation, you must compile it alongside **[`ft_create_elem.c`](../ex00/ft_create_elem.c)**!
    ```bash
    cc -Wall -Wextra -Werror -I . -D EX16 ../tester.c ft_sorted_list_insert.c ../ex00/ft_create_elem.c -o test_ex16
    ./test_ex16
